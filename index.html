@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Piano</title>
+</head>
+
+<body>
+    <section class="piano">
+        <nav>
+            <div class="metronom" title="metronom">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <i class="fas fa-keyboard icon" title="keyboard hints"></i>
+        </nav>
+        <aside class="metronomNav">
+            <div class="start">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause off"></i>
+            </div>
+            <div class="controls">
+                <div class="ctrl c1"></div>
+                <div class="ctrl c2"></div>
+            </div>
+            <i class="fas fa-minus"></i>
+            <div class="tempo"><span>120</span> bpm</div>
+            <i class="fas fa-plus"></i>
+        </aside>
+        <section class="keyboard">
+            <div class="white c"><span class="note">c</span><span class="keyLetter hide">Q</span></div>
+            <div class="black cis"><span class="note">cis</span><span class="keyLetter hide">2</span></div>
+            <div class="white d"><span class="note">d</span><span class="keyLetter hide">W</span></div>
+            <div class="black dis"><span class="note">dis</span><span class="keyLetter hide">3</span></div>
+            <div class="white e"><span class="note">e</span><span class="keyLetter hide">E</span></div>
+            <div class="white f"><span class="note">f</span><span class="keyLetter hide">R</span></div>
+            <div class="black fis"><span class="note">fis</span><span class="keyLetter hide">4</span></div>
+            <div class="white g"><span class="note">g</span><span class="keyLetter hide">\</span></div>
+            <div class="black gis"><span class="note">gis</span><span class="keyLetter hide">Z</span></div>
+            <div class="white a"><span class="note">a</span><span class="keyLetter hide">Z</span></div>
+            <div class="black ais"><span class="note">b</span><span class="keyLetter hide">S</span></div>
+            <div class="white h"><span class="note">h</span><span class="keyLetter hide">X</span></div>
+            <div class="white c1"><span class="note">c1</span><span class="keyLetter hide">C</span></div>
+            <div class="black cis1"><span class="note">cis1</span><span class="keyLetter hide">F</span></div>
+            <div class="white d1"><span class="note">d1</span><span class="keyLetter hide">V</span></div>
+            <div class="black dis1"><span class="note">dis1</span><span class="keyLetter hide">G</span></div>
+            <div class="white e1"><span class="note">e1</span><span class="keyLetter hide">B</span></div>
+            <div class="white f1"><span class="note">f1</span><span class="keyLetter hide">N</span></div>
+            <div class="black fis1"><span class="note">fis1</span><span class="keyLetter hide">J</span></div>
+            <div class="white g1"><span class="note">g1</span><span class="keyLetter hide">M</span></div>
+            <div class="black gis1"><span class="note">gis1</span><span class="keyLetter hide">K</span></div>
+            <div class="white a1"><span class="note">a1</span><span class="keyLetter hide">,</span></div>
+            <div class="black ais1"><span class="note">b1</span><span class="keyLetter hide">L</span></div>
+            <div class="white h1"><span class="note">h1</span><span class="keyLetter hide">.</span></div>
+            <div class="white c2"><span class="note">c2</span><span class="keyLetter hide">/</span></div>
+            <div class="black cis2"><span class="note">cis2</span><span class="keyLetter hide">6</span></div>
+            <div class="white d2"><span class="note">d2</span><span class="keyLetter hide">Y</span></div>
+            <div class="black dis2"><span class="note">dis2</span><span class="keyLetter hide">7</span></div>
+            <div class="white e2"><span class="note">e2</span><span class="keyLetter hide">U</span></div>
+            <div class="white f2"><span class="note">f2</span><span class="keyLetter hide">I</span></div>
+            <div class="black fis2"><span class="note">fis2</span><span class="keyLetter hide">9</span></div>
+            <div class="white g2"><span class="note">g2</span><span class="keyLetter hide">O</span></div>
+            <div class="black gis2"><span class="note">gis2</span><span class="keyLetter hide">0</span></div>
+            <div class="white a2"><span class="note">a2</span><span class="keyLetter hide">P</span></div>
+            <div class="black ais2"><span class="note">b2</span><span class="keyLetter hide">-</span></div>
+            <div class="white h2"><span class="note">h2</span><span class="keyLetter hide">[</span></div>
+            <div class="white c3"><span class="note">c3</span><span class="keyLetter hide">]</span></div>
+        </section>
+    </Section>
+    <section class="soundbars">
+        <audio src="sounds/c.mp3" type="audio/mp3" id="c" data-key="81"></audio>
+        <audio src="sounds/cis.mp3" type="audio/mp3" id="cis" data-key="50"></audio>
+        <audio src="sounds/d.mp3" type="audio/mp3" id="d" data-key="87"></audio>
+        <audio src="sounds/dis.mp3" type="audio/mp3" id="dis" data-key="51"></audio>
+        <audio src="sounds/e.mp3" type="audio/mp3" id="e" data-key="69"></audio>
+        <audio src="sounds/f.mp3" type="audio/mp3" id="f" data-key="82"></audio>
+        <audio src="sounds/fis.mp3" type="audio/mp3" id="fis" data-key="52"></audio>
+        <audio src="sounds/g.mp3" type="audio/mp3" id="g" data-key="226"></audio>
+        <audio src="sounds/gis.mp3" type="audio/mp3" id="gis" data-key="65"></audio>
+        <audio src="sounds/a.mp3" type="audio/mp3" id="a" data-key="90"></audio>
+        <audio src="sounds/ais.mp3" type="audio/mp3" id="ais" data-key="83"></audio>
+        <audio src="sounds/h.mp3" type="audio/mp3" id="h" data-key="88"></audio>
+        <audio src="sounds/c1.mp3" type="audio/mp3" id="c1" data-key="67"></audio>
+        <audio src="sounds/cis1.mp3" type="audio/mp3" id="cis1" data-key="70"></audio>
+        <audio src="sounds/d1.mp3" type="audio/mp3" id="d1" data-key="86"></audio>
+        <audio src="sounds/dis1.mp3" type="audio/mp3" id="dis1" data-key="71"></audio>
+        <audio src="sounds/e1.mp3" type="audio/mp3" id="e1" data-key="66"></audio>
+        <audio src="sounds/f1.mp3" type="audio/mp3" id="f1" data-key="78"></audio>
+        <audio src="sounds/fis1.mp3" type="audio/mp3" id="fis1" data-key="74"></audio>
+        <audio src="sounds/g1.mp3" type="audio/mp3" id="g1" data-key="77"></audio>
+        <audio src="sounds/gis1.mp3" type="audio/mp3" id="gis1" data-key="75"></audio>
+        <audio src="sounds/a1.mp3" type="audio/mp3" id="a1" data-key="188"></audio>
+        <audio src="sounds/ais1.mp3" type="audio/mp3" id="ais1" data-key="76"></audio>
+        <audio src="sounds/h1.mp3" type="audio/mp3" id="h1" data-key="190"></audio>
+        <audio src="sounds/c2.mp3" type="audio/mp3" id="c2" data-key="191"></audio>
+        <audio src="sounds/cis2.mp3" type="audio/mp3" id="cis2" data-key="54"></audio>
+        <audio src="sounds/d2.mp3" type="audio/mp3" id="d2" data-key="89"></audio>
+        <audio src="sounds/dis2.mp3" type="audio/mp3" id="dis2" data-key="55"></audio>
+        <audio src="sounds/e2.mp3" type="audio/mp3" id="e2" data-key="85"></audio>
+        <audio src="sounds/f2.mp3" type="audio/mp3" id="f2" data-key="73"></audio>
+        <audio src="sounds/fis2.mp3" type="audio/mp3" id="fis2" data-key="57"></audio>
+        <audio src="sounds/g2.mp3" type="audio/mp3" id="g2" data-key="79"></audio>
+        <audio src="sounds/gis2.mp3" type="audio/mp3" id="gis2" data-key="48"></audio>
+        <audio src="sounds/a2.mp3" type="audio/mp3" id="a2" data-key="80"></audio>
+        <audio src="sounds/ais2.mp3" type="audio/mp3" id="ais2" data-key="189"></audio>
+        <audio src="sounds/h2.mp3" type="audio/mp3" id="h2" data-key="219"></audio>
+        <audio src="sounds/c3.mp3" type="audio/mp3" id="c3" data-key="221"></audio>
+    </section>
+    <audio src="sounds/metronom.mp3" type="audio/mp3" class="metronom"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>

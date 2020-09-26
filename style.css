@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --whiteBarW: 4.5vw;
+    --blackBarW: 2.5vw;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: black;
+}
+
+nav {
+    text-align: center;
+}
+
+nav .icon {
+    position: absolute;
+    left: 15%;
+    top: 10vh;
+    color: #999;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* metronom */
+
+nav .metronom {
+    position: absolute;
+    left: 10%;
+    top: 10vh;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+nav .metronom span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+    background-color: #999;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+nav .metronom span:nth-child(1) {
+    transform: rotate(-60deg);
+    transform-origin: 0pt;
+}
+
+nav .metronom span:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+nav .metronom span:nth-child(3) {
+    transform: rotate(60deg);
+    transform-origin: right;
+}
+
+nav .metronom span:nth-child(4) {
+    transform: rotate(-60deg);
+    transform-origin: left;
+    bottom: 7.5px;
+    left: 50%;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px black;
+}
+
+nav .metronom span:nth-child(5) {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+
+nav span.show {
+    background-color: rgb(64, 179, 49);
+}
+
+
+nav i.show {
+    color: rgb(64, 179, 49);
+}
+
+
+.metronomNav {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 30vw;
+    height: 7vh;
+    top: -7vh;
+    left: calc(50% - 30vw/2);
+    background-color: #f8f8f8;
+    transition: .2s linear;
+}
+
+.metronomNav.show {
+    top: 0;
+}
+
+.metronomNav i,
+.metronomNav .start {
+    font-size: 20px;
+    cursor: pointer;
+    flex-basis: 10%;
+    text-align: center;
+    align-self: center;
+    line-height: 5vh;
+}
+
+.metronomNav .controls {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.controls .ctrl {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.controls .ctrl.show {
+    background-color: rgb(127, 206, 95);
+}
+
+.metronomNav i.off {
+    display: none;
+}
+
+.metronomNav .tempo {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30%;
+    text-align: center;
+    align-self: center;
+    line-height: 5vh;
+}
+
+/* keyboard */
+
+.keyboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    height: 60vh;
+    background-color: grey;
+}
+
+.keyboard span.hide {
+    display: none;
+}
+
+.keyboard div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    transition: .05s;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+div.white {
+    position: relative;
+    top: 0;
+    width: var(--whiteBarW);
+    background-color: white;
+    border: 1px solid #999;
+    box-shadow: 0 7px 0 #bbb;
+}
+
+div.black {
+    position: absolute;
+    width: var(--blackBarW);
+    height: 42vh;
+    top: 0;
+    background-color: #333;
+    color: white;
+    z-index: 1;
+    box-shadow: 0 7px 0 0 black;
+}
+
+div.grey {
+    background-color: #bbb;
+}
+
+div.move {
+    top: 7px;
+    box-shadow: 0 0 0 gray;
+}
+
+.black.cis {
+    left: calc(var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.dis {
+    left: calc(2*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.fis {
+    left: calc(4*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.gis {
+    left: calc(5*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.ais {
+    left: calc(6*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.cis1 {
+    left: calc(8*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.dis1 {
+    left: calc(9*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.fis1 {
+    left: calc(11*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.gis1 {
+    left: calc(12*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.ais1 {
+    left: calc(13*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.cis2 {
+    left: calc(15*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.dis2 {
+    left: calc(16*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.fis2 {
+    left: calc(18*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.gis2 {
+    left: calc(19*var(--whiteBarW) - var(--blackBarW)/2);
+}
+
+.black.ais2 {
+    left: calc(20*var(--whiteBarW) - var(--blackBarW)/2);
+}
