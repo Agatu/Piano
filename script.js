@@ -1,15 +1,12 @@
 const bars = document.querySelectorAll('.keyboard div');
 const sounds = document.querySelectorAll('.soundbars audio');
 
-let fired = true;
-
 function playSound() {
 
     sounds.forEach(sound => {
         if (this.classList.contains(sound.id)) {
             sound.currentTime = 0;
             sound.play();
-
         }
     }, false);
 
@@ -23,30 +20,25 @@ function playSound() {
 }
 
 function playSoundWithKey(e) {
-    if (fired) {
-        fired = !fired;
-        sounds.forEach(sound => {
-            if (e.keyCode == sound.dataset.key) {
-                sound.currentTime = 0;
-                sound.play();
-                bars.forEach(bar => {
-                    if (bar.classList.contains(sound.id)) {
-                        bar.classList.add('grey', 'move');
-                        setTimeout(() => {
-                            bar.classList.remove('grey', 'move');
-                        }, 150)
-                    }
-                })
-            }
-        }, false);
-    }
+    sounds.forEach(sound => {
+        if (e.keyCode == sound.dataset.key) {
+            sound.currentTime = 0;
+            sound.play();
+            bars.forEach(bar => {
+                if (bar.classList.contains(sound.id)) {
+                    bar.classList.add('grey', 'move');
+                    setTimeout(() => {
+                        bar.classList.remove('grey', 'move');
+                    }, 150)
+                }
+            })
+        }
+    }, false);
 }
+
 
 bars.forEach(bar => bar.addEventListener('click', playSound));
 window.addEventListener('keydown', playSoundWithKey);
-window.onkeyup = function () {
-    fired = !fired;
-};
 
 //metronom
 
