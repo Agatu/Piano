@@ -171,12 +171,16 @@ nav i.show {
     }
 
     nav .icon {
-        font-size: 55px;
+        font-size: 38px;
     }
 
     nav .metronom {
-        height: 52px;
-        width: 52px;
+        height: 40px;
+        width: 40px;
+    }
+
+    nav .metronom span:nth-child(5) {
+        bottom: 6px;
     }
 }
 
