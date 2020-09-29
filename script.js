@@ -37,7 +37,7 @@ function playSoundWithKey(e) {
 }
 
 
-bars.forEach(bar => bar.addEventListener('click', playSound));
+bars.forEach(bar => bar.addEventListener('mousedown', playSound));
 window.addEventListener('keydown', playSoundWithKey);
 
 //metronom
